@@ -204,7 +204,7 @@ public:
         nMasternodeCountDrift = 4;
         nMasternodeCollateralLimit = 1000;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43199500 * COIN;
+        nMaxMoneyOut = 92560000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1524873600;
@@ -217,8 +217,6 @@ public:
         vSeeds.clear();
 /*
         vSeeds.push_back(CDNSSeedData("80.211.128.125", "80.211.128.125"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("94.177.187.54", "94.177.187.54"));           // Single node address
-        vSeeds.push_back(CDNSSeedData("80.211.129.187", "80.211.129.187"));         // Single node address
 */
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet lightpaycoin addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet lightpaycoin script addresses start with '8' or '9'
