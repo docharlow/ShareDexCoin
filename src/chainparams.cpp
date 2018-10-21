@@ -109,7 +109,7 @@ public:
         nLastPOWBlock = 90;
         nMaturity = 50;
         nMasternodeCountDrift = 20;
-        nMasternodeCollateralLimit = 1000;
+        nMasternodeCollateralLimit = 50000;
         nModifierUpdateBlock = 615800;
         nMaxMoneyOut = 92560000 * COIN; // 140  YEARS ++
 
@@ -202,7 +202,7 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nMasternodeCollateralLimit = 1000;
+        nMasternodeCollateralLimit = 50000;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 92560000 * COIN;
 
