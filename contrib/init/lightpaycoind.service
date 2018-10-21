@@ -1,19 +1,19 @@
 [Unit]
-Description=LightPayCoin's distributed currency daemon
+Description=ShareDexCoin's distributed currency daemon
 After=network.target
 
 [Service]
-User=lightpaycoin
-Group=lightpaycoin
+User=sharedexcoin
+Group=sharedexcoin
 
 Type=forking
-PIDFile=/var/lib/lightpaycoind/lightpaycoind.pid
+PIDFile=/var/lib/sharedexcoind/sharedexcoind.pid
 
-ExecStart=/usr/bin/lightpaycoind -daemon -pid=/var/lib/lightpaycoind/lightpaycoind.pid \
-          -conf=/etc/lightpaycoin/lightpaycoin.conf -datadir=/var/lib/lightpaycoind
+ExecStart=/usr/bin/sharedexcoind -daemon -pid=/var/lib/sharedexcoind/sharedexcoind.pid \
+          -conf=/etc/sharedexcoin/sharedexcoin.conf -datadir=/var/lib/sharedexcoind
 
-ExecStop=-/usr/bin/lightpaycoin-cli -conf=/etc/lightpaycoin/lightpaycoin.conf \
-         -datadir=/var/lib/lightpaycoind stop
+ExecStop=-/usr/bin/sharedexcoin-cli -conf=/etc/sharedexcoin/sharedexcoin.conf \
+         -datadir=/var/lib/sharedexcoind stop
 
 Restart=always
 PrivateTmp=true
