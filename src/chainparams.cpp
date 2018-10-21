@@ -144,7 +144,7 @@ public:
 
         vSeeds.push_back(CDNSSeedData("192.168.1.1", "192.168.1.1"));         // Single node address
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 49);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 179);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
