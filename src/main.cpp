@@ -1624,53 +1624,53 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 5000000 * COIN; //premine
     }
 	else if (nHeight < 100001 && nHeight > 0) {
-        nSubsidy = 3 * COIN;
+        nSubsidy = 40 * COIN;
     }
 	else if (nHeight <= 225650 && nHeight >= 100001) {
-        nSubsidy = 4 * COIN;
+        nSubsidy = 40 * COIN;
     }
 	else if (nHeight <= 751300 && nHeight >= 225651) {
-        nSubsidy = 6 * COIN;
+        nSubsidy = 32.8 * COIN;
     }
 	else if (nHeight <= 1276950 && nHeight >= 751301) {
-        nSubsidy = 8 * COIN;
+        nSubsidy = 26.9 * COIN;
     }
 	else if (nHeight <= 1802600 && nHeight >= 1276951) {
-        nSubsidy = 10 * COIN;
+        nSubsidy = 22.06 * COIN;
     }
 	else if (nHeight <= 2328250 && nHeight >= 1802601) {
-        nSubsidy = 12 * COIN;
+        nSubsidy = 18.08 * COIN;
     }
 	else if (nHeight <= 2853900 && nHeight >= 2328251) {
-        nSubsidy = 14 * COIN;
+        nSubsidy = 14.82 * COIN;
     }
 	else if (nHeight <= 3379550 && nHeight >= 2853901) {
-        nSubsidy = 16 * COIN;
+        nSubsidy = 12.16 * COIN;
     }
 	else if (nHeight <= 3905200 && nHeight >= 3379551) {
-        nSubsidy = 18 * COIN;
+        nSubsidy = 10.98 * COIN;
     }
 	else if (nHeight <= 4430850 && nHeight >= 3905201) {
-        nSubsidy = 20 * COIN;
+        nSubsidy = 4.18 * COIN;
     }
 	else if (nHeight <= 4956500 && nHeight >= 4430851) {
-        nSubsidy = 22 * COIN;
+        nSubsidy = 6.7 * COIN;
     }
 	else if (nHeight <= 5482150 && nHeight >= 4956501) {
-        nSubsidy = 24 * COIN;
+        nSubsidy = 5.5 * COIN;
     }
 	else if (nHeight <= 6007800 && nHeight >= 5482151) {
-        nSubsidy = 26 * COIN;
+        nSubsidy = 4.5 * COIN;
     }
 	else if (nHeight <= 6533450 && nHeight >= 6007801) {
-        nSubsidy = 25 * COIN;
+        nSubsidy = 3.7 * COIN;
     
     }
 	else if (nHeight >= 6533451) {
-        nSubsidy = 6 * COIN;
+        nSubsidy = 2 * COIN;
     }
     else {
-        nSubsidy = 0 * COIN;
+        nSubsidy = 2 * COIN;
     }
     return nSubsidy;
 }
@@ -1688,50 +1688,50 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         ret = blockValue * 0.75;
     }
 	else if (nHeight <= 29999 && nHeight >= 20000) {
-        ret = blockValue * 0.70;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 39999 && nHeight >= 30000) {
-        ret = blockValue * 0.65;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 49999 && nHeight >= 40000) {
-        ret = blockValue * 0.655;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 59999 && nHeight >= 50000) {
-        ret = blockValue * 0.66;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 69999 && nHeight >= 60000) {
-        ret = blockValue * 0.665;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 79999 && nHeight >= 70000) {
-        ret = blockValue * 0.67;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 89999 && nHeight >= 80000) {
-        ret = blockValue * 0.675;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 99999 && nHeight >= 90000) {
-        ret = blockValue * 0.68;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 109999 && nHeight >= 100000) {
-        ret = blockValue * 0.685;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 119999 && nHeight >= 110000) {
-        ret = blockValue * 0.69;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 129999 && nHeight >= 120000) {
-        ret = blockValue * 0.695;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 139999 && nHeight >= 130000) {
-        ret = blockValue * 0.70;
+        ret = blockValue * 0.75;
     }
 	else if (nHeight <= 149999 && nHeight >= 140000) {
-        ret = blockValue * 0.705;
+        ret = blockValue * 0.75;
  
     }
-	else if (nHeight >= 530000) {
-        ret = blockValue * 0.90;
+	else if (nHeight >= 29999998) {
+        ret = blockValue * 0.75;
     }
     else {
-		ret = blockValue * 0.50;
+		ret = blockValue * 0.75;
 	}
 	return ret;
 }
