@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("00000dfdec6a9190b26520e93ef5eba15a82646a47ddf8fb5be4477a836467ee"));
+    (0, uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1524873600, // * UNIX timestamp of last checkpoint block
@@ -91,10 +91,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x6e;
-        pchMessageStart[1] = 0x72;
-        pchMessageStart[2] = 0x4f;
-        pchMessageStart[3] = 0x5a;
+        pchMessageStart[0] = 0x3e;
+        pchMessageStart[1] = 0x12;
+        pchMessageStart[2] = 0x3f;
+        pchMessageStart[3] = 0x2a;
         vAlertPubKey = ParseHex("040d75796902e3eda97815d744328237872309a95b42a74b22d7580e56b086fbc19ae1d6ef30c9e27d060c9c48692a663b9a321161e19f853ca6a6499cba7d17f6");
         nDefaultPort = 39797;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // ShareDexCoin starting difficulty is 1 / 2^12
@@ -123,7 +123,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "If you read this line in our code, then you are a genius, but why do you need it?!";
+        const char* pszTimestamp = "ShareDexCoin launches October of 2018";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -134,13 +134,13 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1524873600;
+        genesis.nTime = 1540453208;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 2394236;
+        genesis.nNonce = 634608;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000dfdec6a9190b26520e93ef5eba15a82646a47ddf8fb5be4477a836467ee"));
-        assert(genesis.hashMerkleRoot == uint256("98a0c0dc8214278a8a27ce9d7ca4107dd7cd6787ea6001d3d6c1a7b764098570"));
+        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
+        assert(genesis.hashMerkleRoot == uint256("5f39f439890c3d16f0b72fb0d14cdaeeacce00ac5bcd4c3caa66b4e29f9d8289"));
 
         vSeeds.push_back(CDNSSeedData("192.168.1.1", "192.168.1.1"));         // Single node address
 
@@ -187,10 +187,10 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x41;
-        pchMessageStart[1] = 0x4d;
-        pchMessageStart[2] = 0x5e;
-        pchMessageStart[3] = 0x78;
+        pchMessageStart[0] = 0x21;
+        pchMessageStart[1] = 0x3d;
+        pchMessageStart[2] = 0x1e;
+        pchMessageStart[3] = 0x68;
         vAlertPubKey = ParseHex("043e8760d1c9ef3af5a5e49796afe4389a5cb53c6028b54b9af0a152f34762e453615a1aab9260a31045b85f87d4de36bbe6fd04478fcc103fd47c8e1b813c3d3c");
         nDefaultPort = 39795;
         nEnforceBlockUpgradeMajority = 51;
@@ -207,11 +207,11 @@ public:
         nMaxMoneyOut = 92560000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1524873600;
-        genesis.nNonce = 2394236;
+        genesis.nTime = 1540453208;
+        genesis.nNonce = 634608;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000dfdec6a9190b26520e93ef5eba15a82646a47ddf8fb5be4477a836467ee"));
+        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -274,13 +274,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;        // ShareDexCoin: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1524873600;
-        genesis.nBits = 0x207fffff;
-        genesis.nNonce = 906460;
+        genesis.nTime = 1540453208;
+        genesis.nBits = 0x1e0ffff0;
+        genesis.nNonce = 634608;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 39793;
-        assert(hashGenesisBlock == uint256("00000d885e2813770fd59e71010b6b62a9b0609655109bf4e1b24c3bd524ae0c"));
+        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
