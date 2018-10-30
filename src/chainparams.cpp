@@ -103,7 +103,7 @@ public:
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 0;
+        nMinerThreads = 1;
         nTargetTimespan = 1 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;  // ShareDexCoin: 1 minute
         nLastPOWBlock = 90;
@@ -159,7 +159,7 @@ public:
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fSkipProofOfWorkCheck = false;		// default false
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
@@ -196,7 +196,7 @@ public:
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
-        nMinerThreads = 0;
+        nMinerThreads = 1;
         nTargetTimespan = 1 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;  // ShareDexCoin: 1 minute
         nLastPOWBlock = 200;
@@ -235,7 +235,7 @@ public:
         fAllowMinDifficultyBlocks = true;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = true;
 
