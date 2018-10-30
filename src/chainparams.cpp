@@ -54,10 +54,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
+    (0, uint256("0000035c8c120b0108775fb9edc9f855d9732dd7219ad4666f3e21eed5dbbfb8"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1524873600, // * UNIX timestamp of last checkpoint block
+    1540921375, // * UNIX timestamp of last checkpoint block
     0,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
@@ -67,7 +67,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1524873600,
+    1540921375,
     0,
     250};
 
@@ -75,7 +75,7 @@ static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1524873600,
+    1540921375,
     0,
     100};
 
@@ -134,12 +134,39 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1540453208;
+        genesis.nTime = 1540921375;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 634608;
+        genesis.nNonce = 160645;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
+
+/*
+if(genesis.GetHash() != uint256("0x"))
+{
+      printf("MSearching for genesis block...\n");
+      uint256 hashTarget;
+      hashTarget.SetCompact(genesis.nBits);
+      while(uint256(genesis.GetHash()) > uint256(hashTarget))
+      {
+          ++genesis.nNonce;
+          if (genesis.nNonce == 0)
+          {
+              printf("Mainnet NONCE WRAPPED, incrementing time");
+              std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
+              ++genesis.nTime;
+          }
+          if (genesis.nNonce % 10000 == 0)
+          {
+              printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+          }
+      }
+      printf("Mainnet block.nTime = %u \n", genesis.nTime);
+      printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
+      printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+      printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+}
+*/
+        assert(hashGenesisBlock == uint256("0000035c8c120b0108775fb9edc9f855d9732dd7219ad4666f3e21eed5dbbfb8"));
         assert(genesis.hashMerkleRoot == uint256("5f39f439890c3d16f0b72fb0d14cdaeeacce00ac5bcd4c3caa66b4e29f9d8289"));
 
         vSeeds.push_back(CDNSSeedData("95.179.138.61", "95.179.138.61")); 
@@ -168,7 +195,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "04b8a44c0467e07b59aacede1352cff10d7f194b1a09bd1bc62847b3e29f9f0a340ddc8f9c29423f27e0ec3b29e6b1f9127db303b0cad8f3b83ab8b1b52f61bac4";
         strObfuscationPoolDummyAddress = "Lo3fnibtjwvqYE1T7Lce5uYbdt3pf6PKUu";
-        nStartMasternodePayments = 1524873600; //Wed, 25 Jun 2014 20:36:16 GMT
+        nStartMasternodePayments = 1540921375; //Wed, 25 Jun 2014 20:36:16 GMT
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -208,11 +235,11 @@ public:
         nMaxMoneyOut = 92560000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1540453208;
-        genesis.nNonce = 634608;
+        genesis.nTime = 1540921375;
+        genesis.nNonce = 160645;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
+        assert(hashGenesisBlock == uint256("0000035c8c120b0108775fb9edc9f855d9732dd7219ad4666f3e21eed5dbbfb8"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -243,7 +270,7 @@ public:
         nPoolMaxTransactions = 2;
         strSporkKey = "04cded1204a57acd6280c8499b7a2df052609dbf96546453984d632204d651d72a37013edc9d115e5a385e100eb7e867923fdd0bb7d9dc31aa1eb9d59b00c76697";
         strObfuscationPoolDummyAddress = "xxVKdbxVogrXrPLMo2qEEyCm1GRv2KZCLy";
-        nStartMasternodePayments = 1524873600; //Fri, 09 Jan 2015 21:05:58 GMT
+        nStartMasternodePayments = 1540921375; //Fri, 09 Jan 2015 21:05:58 GMT
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
@@ -275,13 +302,13 @@ public:
         nTargetTimespan = 24 * 60 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;        // ShareDexCoin: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1540453208;
+        genesis.nTime = 1540921375;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 634608;
+        genesis.nNonce = 160645;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 39793;
-        assert(hashGenesisBlock == uint256("00000cab4efd2141f398e1c0ea67d66c0c8300aa2297285e5381684af7909e45"));
+        assert(hashGenesisBlock == uint256("0000035c8c120b0108775fb9edc9f855d9732dd7219ad4666f3e21eed5dbbfb8"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
