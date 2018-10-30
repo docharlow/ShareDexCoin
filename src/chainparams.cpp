@@ -103,7 +103,7 @@ public:
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 1;
+        nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;  // ShareDexCoin: 1 minute
         nLastPOWBlock = 90;
@@ -197,7 +197,7 @@ public:
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
-        nMinerThreads = 1;
+        nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;  // ShareDexCoin: 1 minute
         nLastPOWBlock = 200;
@@ -271,7 +271,7 @@ public:
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 1;
+        nMinerThreads = 0;
         nTargetTimespan = 24 * 60 * 60; // ShareDexCoin: 1 day
         nTargetSpacing = 1 * 60;        // ShareDexCoin: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
